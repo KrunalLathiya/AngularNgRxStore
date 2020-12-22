@@ -5,8 +5,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BlockchainComponent } from './blockchain/blockchain.component';
-import { addCoinReducer } from './reducers/blockchain.reducer';
+import { coinReducer } from './reducers/blockchain.reducer';
 import { DisplayComponent } from './display/display.component';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -16,8 +18,9 @@ import { DisplayComponent } from './display/display.component';
   ],
   imports: [
     BrowserModule,
-    StoreModule.forRoot({blockchain: addCoinReducer}),
-    ReactiveFormsModule
+    StoreModule.forRoot({blockchain2: coinReducer}),
+    ReactiveFormsModule,
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

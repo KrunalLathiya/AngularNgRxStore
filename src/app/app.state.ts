@@ -1,5 +1,5 @@
 import { Blockchain } from './blockchain/blockchain.model';
 
 export interface AppState {
-  readonly blockchain: Blockchain[];
+  readonly blockchain2: Blockchain[];
 }

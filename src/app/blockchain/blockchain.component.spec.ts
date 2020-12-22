@@ -6,12 +6,12 @@ describe('BlockchainComponent', () => {
   let component: BlockchainComponent;
   let fixture: ComponentFixture<BlockchainComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
       declarations: [ BlockchainComponent ]
     })
     .compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(BlockchainComponent);
